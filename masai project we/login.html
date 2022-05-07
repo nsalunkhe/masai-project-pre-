@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #container2{ height:500px;
+                  width:25%;
+                  justify-content: space-around;
+                  margin:auto;
+                  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                  border: 10px;
+                  border-radius:20px;
+                  background-color:rgb(20, 151, 158) ;
+                  padding-top:30px;
+
+                 }
+#mal{
+                    width: 80%;
+                    margin:8px 0;
+                    padding: 12px 20px;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+}
+#pass{
+                    width: 80%;
+                    padding: 12px 20px;
+                    margin:8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+}
+#submit{
+  width: 80%;
+  color: red;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:white;
+  margin-left:30px;
+  text-align: center;
+}    
+#submit:hover{
+    color:white;
+  background-color:skyblue;
+}
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+  color:white;
+  margin-top:25px;
+}
+    </style>
+</head>
+<body>
+    <div id="container2">
+      <h1>Login</h1>
+      <input id="mal" type="text" placeholder="E-Mail" />
+      <input id="pass" type="password" placeholder="Password" />
+      <input id="submit" type="submit"value="Login" />
+      <p>Forget Password</p>
+      <p>Dont Have An Account?  Sign Up</p>
+    </div>
+</body>
+</html>
+<script>
+   document.querySelector("#submit").addEventListener("click",myfunction)
+    function myfunction ()
+ {
+  var mail=document.querySelector("#mal").value;
+  var pass=document.querySelector("#pass").value;
+
+  var y=localStorage.getItem("Email");
+  var z=localStorage.getItem("Password");
+   
+  if(mail==y && pass==z )
+  {
+    alert("Login Successful")
+  }
+  else
+  {
+    alert("Wrong Credentials")
+  }
+ }
+
+</script>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #container{ height:500px;
+                  width:25%;
+                  justify-content: space-around;
+                  margin:auto;
+                  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                  border: 10px;
+                  border-radius:20px;
+                  background-color:rgb(20, 151, 158) ;
+
+                 }
+                 
+                 
+#nam{
+                    width: 80%;
+                    margin:8px 0;
+                    padding: 12px 20px;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+}
+#emal{
+                    width: 80%;
+                    padding: 12px 20px;
+                    margin:8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+}
+#organization{
+                    width: 80%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+}   
+#pass{
+                    width: 80%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                    margin-left:30px;
+   }
+h1 {
+                    text-align: center;
+                    color:white;
+}  
+h3{
+                    text-align: center;
+}   
+p{
+                    margin-left:30px;
+
+}      
+ #submit{
+  width: 80%;
+  color: red;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:white;
+  margin-left:30px;
+  text-align: center;
+}    
+#submit:hover{
+    color:white;
+  background-color:rgb(20, 151, 158);
+}
+#return{
+  width: 80%;
+  color: red;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color:white;
+  margin-left:30px;
+  text-align: center;
+
+}    
+#return:hover{
+  color:white;
+  background-color:rgb(20, 151, 158);
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>-Visitor-</h1>
+      <input id="nam" type="text" placeholder="Full Name" />
+      <input id="emal" type="text" placeholder="E-Mail" />
+      <input id="organization" type="text" placeholder="Organization" />
+      <input id="pass" type="password" placeholder="Password"/>
+      <input id="submit" type="submit" value="Sign Up" />
+      <a href="navbar.html">
+        <input id="return" type="submit" value="Return" />
+     </a>
+
+
+    </div>
+</body>
+</html>
+<script>
+
+    document.querySelector("#submit").addEventListener("click",myfunction)
+   function myfunction ()
+   {
+ var name = document.querySelector("#nam").value;
+ var mail=document.querySelector("#emal").value;
+  var organization =document.querySelector("#organization").value;
+  var password=document.querySelector("#pass").value
+
+localStorage.setItem("Name",name)
+localStorage.setItem("Email",mail)
+localStorage.setItem("organization",organization)
+localStorage.setItem("Password",password)
+
+ alert ("Sign Up Successful")
+
+   }
+</script>
+
+
+
+
+
+<!-- localStorage.setItem("name","Niranjan Salunkhe")
+localStorage.setItem("email","niranjansalunkhe@gmail.com")
+localStorage.setItem("password","pass@123")
+
+ document.querySelector("#submit") .addEventListener("click", myfunction)
+
+ function myfunction ()
+ {
+  var name=document.querySelector("#nam").value;
+  var mail=document.querySelector("#emal").value;
+  var pass=document.querySelector("#pass").value;
+
+  var x=localStorage.getItem("name");
+  var y=localStorage.getItem("email");
+  var z=localStorage.getItem("password");
+   
+  if(name==x && mail==y && pass==z)
+  {
+    alert("Login Successful")
+  }
+  else
+  {
+    alert("Wrong Credentials")
+  }
+ } -->
+
+
+ 
+
+</script>
